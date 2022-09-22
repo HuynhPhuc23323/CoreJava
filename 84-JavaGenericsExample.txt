@@ -1,0 +1,78 @@
+1. Generics in Java
+- compile-time type checking and removing risk of ClassCastException
+- So if we try to add any other type of object in the list, the program will throw compile-time error.
+
+2. Java Generic Class
+- instead of set specify the type of elements like (private Srting a), set generic (private T type) when
+create new class
+- use angle brackets (<>) to specify the type parameter (ClassName<Type> type = new ClassName<>();)
+
+3. Java Generic Interface
+4. Java Generic Type
+- Java Generic Type Naming convention
+- The most commonly used type parameter names are:
+
+E - Element (used extensively by the Java Collections Framework, for example ArrayList, Set etc.)
+K - Key (Used in Map)
+N - Number
+T - Type
+V - Value (Used in Map)
+S,U,V etc. - 2nd, 3rd, 4th types
+
+5. Java Generic Method
+- This feature, known as type inference, allows you to invoke a generic method as an ordinary method, 
+without specifying a type between angle brackets.
+- Compiler will infer the type that is needed
+
+6. Java Generics Bounded Type Parameters
+- to restrict the type of objects that can be used in the parameterized type
+- To declare a bounded type parameter, list the type parameter’s name, followed by the extends keyword, 
+followed by its upper bound
+public static <T extends Comparable<T>> int compare(T t1, T t2){
+		return t1.compareTo(t2);
+	}
+- Java Generics supports multiple bounds also, i.e <T extends A & B & C>. In this case, A can be an 
+interface or class.
+
+7. Java Generics and Inheritance
+- to assign a variable A to another variable B if A is subclass of B.
+- generic type of A can be assigned to generic type of B, but it’s NOT the case.
+
+8. Java Generic Classes and Subtyping
+- For example, ArrayList<E> implements List<E> that extends Collection<E>, so ArrayList<String> is a 
+subtype of List<String> and List<String> is subtype of Collection<String>
+- The subtypes of List<String> can be MyList<String,Object>, MyList<String,Integer> and so on
+
+9. Java Generics Wildcards
+9.1) Java Generics Upper Bounded Wildcard: đọc nhưng chưa hiểu ạ
+9.2) Java Generics Unbounded Wildcard: 
+- Sometimes we have a situation where we want our generic method to be working with all types, in this
+case, an unbounded wildcard can be used ( sum(List<?> list() )
+9.3) Java Generics Lower bounded Wildcard:
+- Suppose we want to add Integers to a list of integers in a method, we can keep the argument type as 
+List<Integer> but it will be tied up with Integers whereas List<Number> and List<Object> can also hold
+ integers, so we can use a lower bound wildcard to achieve this
+- We use generics wildcard (?) with super keyword and lower bound class to achieve this 
+List<? super Integer> list
+
+10. Subtyping using Generics Wildcard:
+
+11. Java Generics Type Erasure:
+
+12. Generics FAQs:
+12.1) Why do we use Generics in Java?
+Generics provide strong compile-time type checking and reduces risk of ClassCastException and explicit
+ casting of objects.
+12.2) What is T in Generics?
+We use <T> to create a generic class, interface, and method. The T is replaced with the actual type 
+when we use it.
+12.3) How does Generics work in Java?
+Generic code ensures type safety. The compiler uses type-erasure to remove all type parameters at the
+ compile time to reduce the overload at runtime.
+
+
+
+
+
+
+
