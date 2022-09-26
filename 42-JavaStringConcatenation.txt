@@ -1,0 +1,6 @@
+2 ways to concatenate strings (String) in Java: by + operator, concat()
+StringBuilder: append(), format (s1 ="hello" s2 ="world" s=String.format("%s%s",s1,s2);), String.join
+StringJoiner: add()
+Collectors.joining(): 
+	List<String> liststr = Arrays.asList("1","22","34");
+	String str = liststr.stream().collect(Collectors.joining(", "));

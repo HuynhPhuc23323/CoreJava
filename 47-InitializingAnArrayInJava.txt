@@ -1,0 +1,5 @@
+- initialize it with the new keyword and rectangular bracket containing its size
+- IntStream.range(int start, int end) => [start, end)
+- IntStream.rangeClosed(int start, int end) => [start, end] 
+- IntStream.of()
+- Java Array Loop Initialization

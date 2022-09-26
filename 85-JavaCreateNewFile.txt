@@ -1,0 +1,12 @@
+3 approach to create new java file:
+ - File.createNewFile() : When we initialize FIle object, provide file name and then call createNewFile()
+methods return TRUE if new file is created and FALSE if file exists (throws IOException when its not able
+to create the file) //Thay vì dùng "/" để phân cách các thư mục thì nên dùng file.separator
+ (System.getPropety("file.separator"))
+
+ - FileOutputStream.write(byte[] b) :If you want to create a new file and at the same time write some 
+data into it, you can use FileOutputStream write method
+
+ - Java NIO Files.write() : We can use Java NIO Files class to create a new file and write some data
+ into it. This is a good option because we don’t have to worry about closing IO resources.
+
