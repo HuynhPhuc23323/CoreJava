@@ -1,0 +1,4 @@
+- Using FileWriter (the number of write operations is less)
+- Using BufferedWriter (the number of write operations is huge)
+- Using PrintWriter
+- Using FileOutputStream (append binary or raw stream data)

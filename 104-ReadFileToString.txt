@@ -1,0 +1,6 @@
+Many ways to read file to String:
+	Java read file to String using BufferedReader
+	Read file to String in java using FileInputStream
+	Java read file to string using Files class
+	Read file to String using Scanner class
+	Java read file to string using Apache Commons IO FileUtils class

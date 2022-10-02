@@ -1,0 +1,4 @@
+- Using BufferedReader
+- Using Scanner
+- Using Files
+- Using RandomAccessFile

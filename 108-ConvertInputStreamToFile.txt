@@ -1,0 +1,5 @@
+4 ways:
+	Plain Java – FileOutputStream
+	Apache Commons IO – FileUtils.copyInputStreamToFile
+	Java 7 – Files.copy
+	Java 9 – InputStream.transferTo

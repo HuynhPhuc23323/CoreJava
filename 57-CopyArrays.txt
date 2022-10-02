@@ -1,0 +1,15 @@
+- System class: cùng 1 vùng nhớ
+System.arrayCopy( sourceArray, startingPosition, copyArray, startingPositionCopyArray, numberOfElementsToBeCopied)
+- Arrays class:  the Arrays class uses Math.min(…) for selecting the minimum of the source array length, and the 
+value of the new length parameter to determine the size of the resulting array (cùng 1 vùng nhớ)
+	Arrays.copyOf(array, newLength);
+	Arrays.copyOfRange(array, from, to) 
+- Object.clone() (primitive types, k cùng bộ nhớ): It creates a shallow copy of the non-primitive type array 
+elements, even if the enclosed object's class implements the Cloneable interface and overrides the clone() 
+method from the Object class.
+- Using the Stream API:
+String[] strArray = {"orange", "red", "green'"};
+String[] copiedArray = Arrays.stream(strArray).toArray(String[]::new);
+- External Libraries: Apache Commons 3 offers a utility class called SerializationUtils, which provides a 
+clone(…) method.
+SerializationUtils.clone(array);

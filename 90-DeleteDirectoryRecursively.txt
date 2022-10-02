@@ -1,0 +1,16 @@
+4 way:
+- Deleting a Directory Recursively have 4 step:
+ 	1. Get all the contents of the directory to be deleted
+ 	2. Delete all children that are not a directory (exit from recursion)
+ 	3. For each subdirectory of current directory, start with step 1 (recursive step)
+ 	4. Delete the directory
+- Using FileUtils from commons-io (FileUtils.deleteDirectory(file);)
+- Using FileSystemUtils from Spring (FileSystemUtils.deleteRecursively(file);)
+- Using NIO2 Java 8: Here, Files.walk() returns a Stream of Path that we sort in reverse
+ order. This places the paths denoting the contents of directories before directories 
+itself. Thereafter it maps Path to File and deletes each File.
+	1. Visiting a file – delete it
+	2. Visiting a directory before processing its entries – do nothing
+	3. Visiting a directory after processing its entries- delete the directory, as all entries 
+within this directory would have been processed (or deleted) by now
+	4.Unable to visit a file – rethrow IOException that caused the failure

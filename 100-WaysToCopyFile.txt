@@ -1,0 +1,4 @@
+- Java Copy File - Stream => best way to copy file
+- Java Copy File - java.nio.channels.FileChannel
+- Java Copy File - Apache Commons IO FileUtils (FileUtils.copyFile(source, dest);)
+- Java Copy File - Files class Java 7 or higher ( Files.copy(source.toPath(), dest.toPath());)

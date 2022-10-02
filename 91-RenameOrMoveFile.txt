@@ -1,0 +1,2 @@
+- Use renameTo() method to remove or rename the file (not guaranteed to work in all cases
+- Use File.move(Path source, Path target, CopyOptions... options)
